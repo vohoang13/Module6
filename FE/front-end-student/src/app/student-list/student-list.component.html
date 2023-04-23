@@ -1,0 +1,31 @@
+<h4 style="font-family: Algerian; text-align: center; font-size:50px">Student</h4>
+<button type="button" class="btn btn-secondary" ><a routerLink="/create">Add New</a></button>
+<table class="table table-striped">
+  <thead class="thread-dark">
+  <tr>
+    <th>Code Student</th>
+    <th>Name</th>
+    <th>NameGroup</th>
+    <th>Name Subject</th>
+    <th>Teacher</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let s of student">
+    <td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+    <td>{{s.nameGroup}}</td>
+    <td>{{s.nameSubject}}</td>
+    <td>{{s.teacher}}</td>
+    <td>{{s.email}}</td>
+    <td>{{s.phoneNumber}}</td>
+    <td><button class="btn btn-info"><a style="text-decoration: none; color: black" [routerLink]="['/student/edit',s.id]">Edit</a></button></td>
+    <td><button class="btn btn-danger"><a style="text-decoration: none; color: black" [routerLink]="['/delete',s.id]">Delete</a></button></td>
+  </tr>
+  </tbody>
+</table>
+
