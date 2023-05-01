@@ -23,9 +23,15 @@
     <td>{{s.teacher}}</td>
     <td>{{s.email}}</td>
     <td>{{s.phoneNumber}}</td>
-    <td><button class="btn btn-info"><a style="text-decoration: none; color: black" [routerLink]="['/student/edit',s.id]">Edit</a></button></td>
+    <td><button class="btn btn-info"><a style="text-decoration: none; color: black" [routerLink]="['/update',s.id]">Edit</a></button></td>
     <td><button class="btn btn-danger"><a style="text-decoration: none; color: black" [routerLink]="['/delete',s.id]">Delete</a></button></td>
   </tr>
   </tbody>
 </table>
+<pagination-controls class="pagination justify-content-center"
+                     previousLabel=""
+                     nextLabel=""
+                     ellipsisLabel="...">
+<!--                     (pageChange)="p = $event">-->
+</pagination-controls>
 

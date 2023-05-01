@@ -8,14 +8,14 @@ label {
     --nc-primary-gradient: linear-gradient(#EE4D2D,#FF7337);
 }
 .my-btn {
-    background-color: #7eb7aa;
+    background-color: #808080;
     color: #fff;
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 20px;
-    box-shadow: 0px 0px 10px #aaa;
+    /*margin-right: 20px;*/
+    /*box-shadow: 0px 0px 10px #aaa;*/
 }
 
 .my-btn-2 {
@@ -25,8 +25,8 @@ label {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 20px;
-    box-shadow: 0px 0px 10px #aaa;
+    margin-left: 10px;
+    /*box-shadow: 0px 0px 10px #aaa;*/
 }
 
 .my-btn-3{
@@ -36,17 +36,18 @@ label {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    /*margin-left: 20px;*/
-    box-shadow: 0px 0px 10px #aaa;
+    /*box-shadow: 0px 0px 10px #aaa;*/
 }
 
-.container {
+.my-container {
     margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
     background-color: #f7f7f7;
-    /*background-color: white;*/
     box-shadow: 0px 0px 10px #aaa;
     padding: 20px;
     border-radius: 20px;
+    /*width: 50%;*/
 }
 
 * {
@@ -58,25 +59,48 @@ label {
     margin: 20px;
 }
 
+
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-}
-.pagination a {
-    color: #333;
-    padding: 5px 10px;
-    text-decoration: none;
-}
-.pagination a.prev,
-.pagination a.next {
-    font-weight: bold;
+    align-items: center;
 }
 
-a:hover{
-    background-color: #E64313;
-    color: #fff !important;
+.pagination .text {
+    font-size: 16px;
 }
+
+.pagination .text1 {
+    font-size: 26px;
+}
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+/* thiết lập style cho class active */
+.pagination a.active {
+    background: var(--nc-primary-gradient);
+    color: #fff;
+}
+/* thêm màu nền khi người dùng hover vào class không active */
+.pagination a:hover:not(.active) {
+    background-color: var(--nc-primary-bg);
+    opacity: .9;
+    color: #000 !important;
+}
+
+/*a:hover{*/
+/*    background-color: #E64313;*/
+/*    color: #fff !important;*/
+/*}*/
+
+.form{
+    margin-right:20px ;
+    margin-left:20px ;
+}
+
 
 
 

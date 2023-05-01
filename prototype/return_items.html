@@ -16,54 +16,82 @@
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.8.1/dist/autoNumeric.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <h2 class="mb-3" style="text-align: center">Trả Đồ Cầm</h2>
-    <hr>
-    <form class="form-group">
-        <div class="mb-3">
-            <label for="inputHD" class="form-label">Hợp đồng:</label>
-            <div class="d-flex align-items-center">
-                <input type="button" value="Chọn hợp đồng" class="my-btn-3 me-3" id="inputHD" data-bs-toggle="modal"
-                       data-bs-target="#exampleModal">
-                <label for="inputId">Mã hợp đồng:</label>
-                <input type="text" class="form-control ms-3" id="inputId">
+<div class="my-container">
+    <div class="form">
+        <h2 class="mb-3" style="text-align: center">Trả Đồ Cầm</h2>
+        <hr>
+        <form class="form-group">
+
+            <div class="mb-3">
+                <label for="inputHD" class="form-label">Hợp đồng:</label>
+                <div class="d-flex align-items-center">
+                    <input type="button" value="Chọn hợp đồng" class="my-btn-3" id="inputHD" data-bs-toggle="modal"
+                           data-bs-target="#exampleModal">
+                </div>
             </div>
-        </div>
-        <div class="mb-3">
-            <label for="inputName" class="form-label">Tên khách hàng:</label>
-            <input type="text" class="form-control" id="inputName">
-        </div>
-        <div class="mb-3">
-            <label for="inputItems" class="form-label">Đồ cầm:</label>
-            <input type="text" class="form-control" id="inputItems">
-        </div>
-        <div class="row mb-3">
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="inputId" class="form-label">Mã hợp đồng:</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="HD-001">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputName" class="form-label">Tên khách hàng:</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Nguyễn Văn A">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="inputItems" class="form-label">Đồ cầm:</label>
+                <input type="text" class="form-control" id="inputItems" placeholder="Honda AirBlack">
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="inputMoney" class="form-label">Tiền cho vay:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMoney" placeholder="5,000,000">
+                        <span class="input-group-text">VND</span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputInterest" class="form-label">Tiền lãi:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputInterest" placeholder="5">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="inputDateBegin" class="form-label">Ngày làm hợp đồng:</label>
+                    <input type="text" class="form-control" id="inputDateBegin" placeholder="25/02/2023">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputDateEnd" class="form-label">Ngày kết thúc:</label>
+                    <input type="text" class="form-control" id="inputDateEnd" placeholder="25/04/2023">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="inputDateReturn" class="form-label">Ngày trả đồ:</label>
+                    <input type="date" class="form-control" id="inputDateReturn">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputPay" class="form-label">Số tiền thanh toán:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputPay" disabled placeholder="20,000,000">
+                        <span class="input-group-text">VND</span>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-6">
-                <label for="inputMoney" class="form-label">Tiền cho vay:</label>
-                <input type="text" class="form-control" id="inputMoney">
+                <button class="my-btn" type="reset">Hủy</button>
+                <button class="my-btn-2" type="submit">Thanh toán</button>
             </div>
-            <div class="col-sm-6">
-                <label for="inputInterest" class="form-label">Tiền lãi:</label>
-                <input type="text" class="form-control" id="inputInterest">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-sm-6">
-                <label for="inputDateReturn" class="form-label">Ngày trả đồ:</label>
-                <input type="date" class="form-control" id="inputDateReturn">
-            </div>
-            <div class="col-sm-6">
-                <label for="inputPay" class="form-label">Số tiền thanh toán:</label>
-                <input type="text" class="form-control" id="inputPay">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <button class="my-btn" type="reset">Hủy</button>
-            <button class="my-btn-2" type="submit">Thanh toán</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <!--Modal-->
@@ -71,7 +99,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header" style="background-image: linear-gradient(#EE4D2D,#FF7337)">
-                <h5 class="modal-title" id="exampleModalLabel" style="color: white">Chọn hợp đồng</h5>
+                <h5 class="modal-title" id="exampleModalLabel" style="color: white">Chọn Hợp Đồng</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="margin-bottom:30px">
@@ -96,7 +124,7 @@
                             <input type="date" class="form-control" id="inputDate">
                         </div>
                     </div>
-                    <div style="margin-left:50% ">
+                    <div style="margin-left:50%">
                         <button class="my-btn-3" type="submit"><i class="uil uil-search"></i> Tìm kiếm</button>
                     </div>
                 </div>
@@ -120,7 +148,7 @@
                             <td>150,000,000</td>
                             <td>15/03/2023</td>
                             <td>
-                                <button type="submit" class="my-btn">Chọn</button>
+                                <button type="submit" class="my-btn-2">Chọn</button>
                             </td>
                         </tr>
                         <tr>
@@ -130,20 +158,21 @@
                             <td>150,000,000</td>
                             <td>15/03/2023</td>
                             <td>
-                                <button type="submit" class="my-btn">Chọn</button>
+                                <button type="submit" class="my-btn-2">Chọn</button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="pagination">
-                    <a href="#" class="prev">Trước</a>
-                    <a href="#" class="page active">1</a>
-                    <a href="#" class="page">2</a>
-                    <a href="#" class="page">3</a>
-                    <a href="#" class="page">4</a>
-                    <a href="#" class="page">5</a>
-                    <a href="#" class="next">Sau</a>
+                    <a href="#" class="text1">«</a>
+                    <a href="#" class="text">1</a>
+                    <a class="active" href="#" class="text">2</a>
+                    <a href="#" class="text">3</a>
+                    <a href="#" class="text">4</a>
+                    <a href="#" class="text">5</a>
+                    <a href="#" class="text">6</a>
+                    <a href="#" class="text1">»</a>
                 </div>
             </div>
             <div class="modal-footer">
@@ -152,5 +181,15 @@
     </div>
 </div>
 </body>
+<script>
+    var myInput = document.getElementById('inputMoney');
+    new AutoNumeric(myInput, {
+        minimumValue: '0',
+        maximumValue: '99999999999',
+        decimalPlaces: 2,
+        decimalCharacter: '.',
+        digitGroupSeparator: ',',
+    });
+</script>
 
 </html>

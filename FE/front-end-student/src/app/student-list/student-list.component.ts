@@ -11,20 +11,24 @@ import {Student} from "../model/Student";
 export class StudentListComponent implements OnInit {
   student : Student[] = []
 
-  students : Student;
+  page : number = 0;
+
+  // p : number;
+
+  // students : Student;
 
   constructor(private studentService : StudentService, private route : Router, private activatedRoute : ActivatedRoute) {
-      this.studentService.getAll().subscribe(next=>{
-        this.student = next;
+      this.studentService.getAll(this.page).subscribe(next=>{
+        this.student = next.content;
       })
-      // this.activatedRoute.paramMap.subscribe(next =>{
-      //   const id = next.get('id');
-      //   if(id != null){
-      //     this.studentService.delete(parseInt(id)).subscribe(next => {
-      //         this.route.navigateByUrl("student");
-      //     })
-      //   }
-      // })
+      this.activatedRoute.paramMap.subscribe(next =>{
+        const id = next.get('id');
+        if(id != null){
+          this.studentService.delete(parseInt(id)).subscribe(next => {
+              this.route.navigateByUrl("student");
+          })
+        }
+      })
   }
 
   ngOnInit(): void {

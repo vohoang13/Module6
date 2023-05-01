@@ -1,0 +1,42 @@
+<div id="input" class="container"
+     style="border: 1px solid; box-shadow: -10px 0px 10px -5px rgba(0, 0, 0, 0.75), 10px 0px 10px -5px rgba(0, 0, 0, 0.75); padding: 10px; border-radius:5px">
+  <h3 style="font-family: Algerian;">Infor Student</h3>
+  <form class="row g-3" [formGroup]="reactiveForm" (ngSubmit)="update()" *ngIf="student">
+    <div class="col-md-6">
+      <label for="inputId" class="form-label">ID</label>
+      <input type="text" class="form-control" id="inputId" formControlName="id">
+      <!--      <p style="color: red" *ngIf="reactiveForm.controls.name.hasError('required')&&reactiveForm.controls.name.dirty">Không được để trống</p>-->
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Name</label>
+      <input type="text" class="form-control" id="inputEmail4" formControlName="name">
+      <!--      <p style="color: red" *ngIf="reactiveForm.controls.name.hasError('required')&&reactiveForm.controls.name.dirty">Không được để trống</p>-->
+    </div>
+    <div class="col-md-3">
+      <label for="inputPassword4" class="form-label">nameGroup</label>
+      <input type="text" class="form-control" id="inputPassword4" formControlName="nameGroup">
+    </div>
+    <div class="col-6">
+      <label for="inputAddress" class="form-label">nameSubject</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="nameSubject">
+    </div>
+    <div class="col-6">
+      <label for="inputAddress2" class="form-label">email</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" formControlName="email">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">teacher</label>
+      <input type="text" class="form-control" id="inputCity" formControlName="teacher">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">phoneNumber</label>
+      <input type="text" class="form-control" id="inputZip" formControlName="phoneNumber">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+

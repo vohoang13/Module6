@@ -3,6 +3,8 @@ package com.example.back_end_student.service;
 import com.example.back_end_student.model.Student;
 import com.example.back_end_student.repository.IStudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,8 +25,18 @@ public class StudentService implements IStudentService{
         return iStudentRepository.findById(id).get();
     }
 
-//    @Override
-//    public void delete(Integer id) {
-//        iStudentRepository.deleteById(id);
-//    }
+    @Override
+    public void delete(Integer id) {
+        iStudentRepository.deleteById(id);
+    }
+
+    @Override
+    public void update(Student student) {
+        iStudentRepository.save(student);
+    }
+
+    @Override
+    public Page<Student> findWithPage(PageRequest pageRequest) {
+        return iStudentRepository.findAll(pageRequest);
+    }
 }
