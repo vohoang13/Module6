@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Trả Đồ Cầm</title>
     <link href="style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            crossorigin="anonymous"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
             crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -103,62 +105,146 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="margin-bottom:30px">
-                <div>
-                    <div class="mb-3 row">
-                        <label for="inputCodeHD" class="col-sm-2 col-form-label">Mã HD: </label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="inputCodeHD">
+                <div class="top">
+                    <div class="memu-search">
+                        <div class="searchBox">
+                            <i class="uil uil-search navToggle"></i>
+                            <input type="text" placeholder="Searching...(Mã hợp đồng: VD: HD-001)" />
+                            <button class="button-search">
+                                <svg width="24" height="24" focusable="false">
+                                    <path
+                                            d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"
+                                    ></path>
+                                </svg>
+                            </button>
                         </div>
-                        <label for="inputItemsName" class="col-sm-2 col-form-label">Đồ cầm: </label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="inputItemsName">
+                        <div class="form-search">
+                            <form>
+<!--                                <div class="row">-->
+<!--                                    <label for="email" class="col-md-3 col-form-label">Email</label>-->
+<!--                                    <div class="col-md-6 select-form">-->
+<!--                                        <select class="form-select">-->
+<!--                                            <option selected>Open this select menu</option>-->
+<!--                                            <option value="1">One</option>-->
+<!--                                            <option value="2">Two</option>-->
+<!--                                            <option value="3">Three</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="row">
+                                    <label for="nameCustomer" class="col-md-3 col-form-label">Tên khách hàng</label>
+                                    <div class="col-md-6 select-form">
+                                        <input type="text" class="form-control" id="nameCustomer">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="nameProduct" class="col-md-3 col-form-label date-text">Đồ cầm</label>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" id="nameProduct"/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="dateBegin" class="col-md-3 col-form-label date-text">Ngày làm hợp đồng</label>
+                                    <div class="col-md-6 form-group">
+                                        <input type="date" class="form-control" id="dateBegin"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-submit">
+                                    <button type="submit" class="btn-reset">Đặt lại</button>
+                                    <button type="submit" class="btn-search">Tìm kiếm</button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="inputNameSearch" class="col-sm-2 col-form-label">Tên khách hàng: </label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" id="inputNameSearch">
-                        </div>
-                        <label for="inputDate" class="col-sm-2 col-form-label">Ngày làm hợp đồng: </label>
-                        <div class="col-sm-4">
-                            <input type="date" class="form-control" id="inputDate">
-                        </div>
-                    </div>
-                    <div style="margin-left:50%">
-                        <button class="my-btn-3" type="submit"><i class="uil uil-search"></i> Tìm kiếm</button>
                     </div>
                 </div>
-                <div class="my-table">
-                    <table class="table" style="vertical-align: center; text-align: center">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <colgroup>
+                            <col style="width: 10%" />
+                            <col style="width: 15%" />
+                            <col style="width: 15%" />
+                            <col style="width: 10%" />
+                            <col style="width: 15%" />
+                            <col style="width: 10%" />
+                            <col style="width: 15%" />
+<!--                            <col style="width: 15%" />-->
+                            <!-- <col style="width: 10%" />
+                              <col style="width: 10%" />
+                              <col style="width: 10%" /> -->
+                        </colgroup>
                         <thead>
-                        <tr style=" background-image: linear-gradient(#EE4D2D,#FF7337)">
-                            <th>Mã HD</th>
+                        <tr id="color-bg">
+                            <th>STT</th>
+                            <th>Mã hợp đồng</th>
                             <th>Tên khách hàng</th>
                             <th>Đồ cầm</th>
-                            <th>Tiền cho vay</th>
                             <th>Ngày làm hợp đồng</th>
-                            <th></th>
+                            <th>Ngày hết hợp đồng</th>
+                            <th class="text-center">Chức năng</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <th>1</th>
-                            <td>Mark</td>
+                            <td>1</td>
+                            <td>HD-001</td>
+                            <td>Trần Thế huy</td>
                             <td>Xe</td>
-                            <td>150,000,000</td>
-                            <td>15/03/2023</td>
-                            <td>
-                                <button type="submit" class="my-btn-2">Chọn</button>
+                            <td>01-03-2003</td>
+                            <td>01-04-2003</td>
+                            <td class="actions" style="text-align: center">
+                                <a class="my-btn-2">Chọn</a>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>1</th>
-                            <td>Mark</td>
+                            <td>1</td>
+                            <td>HD-1</td>
+                            <td>Trần Thế huy</td>
                             <td>Xe</td>
-                            <td>150,000,000</td>
-                            <td>15/03/2023</td>
-                            <td>
-                                <button type="submit" class="my-btn-2">Chọn</button>
+                            <td>01-03-2003</td>
+                            <td>01-04-2003</td>
+                            <td class="actions" style="text-align: center" >
+                                <a class="my-btn-2">Chọn</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>HD-1</td>
+                            <td>Trần Thế huy</td>
+                            <td>Xe</td>
+                            <td>01-03-2003</td>
+                            <td>01-04-2003</td>
+                            <td class="actions" style="text-align: center">
+                                <a class="my-btn-2" >Chọn</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>HD-1</td>
+                            <td>Trần Thế huy</td>
+                            <td>Xe</td>
+                            <td>01-03-2003</td>
+                            <td>01-04-2003</td>
+                            <td class="actions" style="text-align: center">
+                                <a class="my-btn-2" >Chọn</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>HD-1</td>
+                            <td>Trần Thế huy</td>
+                            <td>Xe</td>
+                            <td>01-03-2003</td>
+                            <td>01-04-2003</td>
+                            <td class="actions" style="text-align: center">
+                                <a class="my-btn-2">Chọn</a>
                             </td>
                         </tr>
                         </tbody>
@@ -175,8 +261,8 @@
                     <a href="#" class="text1">»</a>
                 </div>
             </div>
-            <div class="modal-footer">
-            </div>
+<!--            <div class="modal-footer">-->
+<!--            </div>-->
         </div>
     </div>
 </div>
@@ -190,6 +276,15 @@
         decimalCharacter: '.',
         digitGroupSeparator: ',',
     });
+
+    const buttonSearch = document.querySelector(".button-search");
+    const formSearch = document.querySelector(".form-search");
+
+    buttonSearch.addEventListener("click", (e) => {
+        e.preventDefault();
+        formSearch.classList.toggle("active");
+    });
+
 </script>
 
 </html>
